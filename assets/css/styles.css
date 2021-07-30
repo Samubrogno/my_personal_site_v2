@@ -6,12 +6,18 @@
 body{
     background-color: #EEEEEE;
 }
-.page, .header, article{
+hr{
+    display: block;
+    width: 70%;
+    border-width: 1px;
+    margin-top: 10px;
+}
+.page, .header, article, aside{
     display: flex;
     align-items:center;
     justify-content:center;
 }
-.page, article{
+.page, article,aside{
     flex-direction: column;
 }
 .header{
@@ -20,8 +26,7 @@ body{
     color: rgb(255, 255, 255);
     height: 150px;
 }
-.page{
-    border: 1px solid red; /*debug*/
+.page,aside{
     width:90%;
     margin: 0 auto;
 }
@@ -32,22 +37,25 @@ body{
 }
 article{
     width:100%;
-    border: 1px solid blue; /*debug*/
 }
-h2,p{
+h2,h3,p{
     text-transform: uppercase;
 }
-h2{
+h2,h3{
     margin-top:20px;
 
 }
 p{
     margin-top:10px;
     width:100%;
-    text-align:left;
+    text-align:center;
 }
 ul{
     width:80%;
+}
+a{
+    text-decoration:none;
+    color: rgb(10, 77, 170);
 }
 
 
@@ -58,14 +66,22 @@ ul{
 
 }
 @media only screen and (min-width: 768px) and (max-width:991) {
-
+    .page{
+        flex-direction:row;
+    }
 }
 @media only screen and (min-width: 992px) and (max-width:1199) {
-
+    .page{
+        flex-direction:row;
+    }
 }
 @media only screen and (min-width: 1200) and (max-width:1399) {
-
+    .page{
+        flex-direction:row;
+    }
 }
 @media only screen and (min-width: 1400){
-
+    .page{
+        flex-direction:row;
+    }
 }
