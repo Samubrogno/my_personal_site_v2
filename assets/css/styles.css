@@ -12,13 +12,13 @@ hr{
     border-width: 1px;
     margin-top: 10px;
 }
-.page, .header, article, aside{
+.page, .content, .header, article, aside{
     display: flex;
     align-items:center;
     justify-content:center;
 }
-.page, article,aside{
-    flex-direction: column;
+.page, .content, article,aside{
+    flex-direction:column;
 }
 .header{
     display: flex;
@@ -26,7 +26,7 @@ hr{
     color: rgb(255, 255, 255);
     height: 150px;
 }
-.page,aside{
+.content,aside{
     width:90%;
     margin: 0 auto;
 }
@@ -62,26 +62,24 @@ a{
 
 
 
-@media only screen and (min-width: 576px) and (max-width:767px) {
-
-}
-@media only screen and (min-width: 768px) and (max-width:991) {
-    .page{
-        flex-direction:row;
+@media screen and (max-width:600px) {   /*smartphone*/
+    body{
+        background-color: lightgreen;
     }
 }
-@media only screen and (min-width: 992px) and (max-width:1199) {
+@media screen and (min-width: 601px) and (max-width:1024px) {  /*tablet*/
     .page{
-        flex-direction:row;
+        flex-direction:row-reverse;
+        background-color: lightblue;
+    }
+    .image{
+        order: 1;
+        border: 1px solid red;
     }
 }
-@media only screen and (min-width: 1200) and (max-width:1399) {
+@media screen and (min-width: 1025px) { /*desktop*/
     .page{
-        flex-direction:row;
-    }
-}
-@media only screen and (min-width: 1400){
-    .page{
-        flex-direction:row;
+        flex-direction:row-reverse;
+        background-color: lightcoral;
     }
 }
