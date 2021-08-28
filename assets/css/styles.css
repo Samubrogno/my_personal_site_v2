@@ -34,6 +34,7 @@ hr{
     display: flex;
     height:300px;
     width:220px;
+    border-radius: 10px;
 }
 article{
     width:100%;
@@ -66,6 +67,9 @@ a{
 @media screen and (max-width:600px) {   /*smartphone*/
     #pp2{
         display: none;
+    }
+    #pp1{
+        margin-top:10px;
     }
 }
 @media screen and (min-width: 601px) and (max-width:1024px) {  /*tablet*/
